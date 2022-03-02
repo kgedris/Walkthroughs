@@ -3,33 +3,43 @@ OSINT is an important and often overlooked part of pentesting. Doing proper reco
 
 ### My Approach
 Infiltration is, as of this writing, a medium level challenge. The prompt asks us to do recon on social media to find something that could help us break into the target company: Evil Corp LLC.
+
 ![Hack the Box challenge - Infiltration](images/infiltration.png)
 
 My first instinct when doing recon is to use Google dorking to narrow down my search. Since the prompt tells us to do some social media recon, I picked a social media site I thought might have information about Evil Corp LLC to start with – Facebook. Using the “insite” keyphrase, I searched for evidence of Evil Corp and got several results. At the top was a Facebook page followed by a LinkedIn page.
+
 ![Google Dorking search results](images/googledork.png)
 
 Although I was searching specifically for Facebook, the LinkedIn page made me curious and I decided to start there. I opened it up to find a flag right in the company description.
+
 ![LinkedIn page for Evil Corp LLC](images/linkedin.png)
 
 I was surprised, but other people had rated the challenge easy. From my experience with OSINT and encoding I could tell the flag was encoded in Base64 and that seemed odd. I tried it on the website just in case – it didn’t work – and then used Cyber Chef to decode the message.
+
 ![CyberChef decoding Base64 flag](images/cyberchef.png)
 
 A message of encouragement to show we were on the right track. Since this wasn’t the actual answer, I decided I probably needed to dig deeper on the LinkedIn site. I hadn’t forgotten about the Facebook result and didn’t want to leave it behind before diving deeper, so I took a look.
+
 ![Facebook page for Evil Corp](images/facebook.png)
 
 Unfortunately, there wasn’t anything really interesting or apparent related to the Hack the Box challenge. So, I went back to LinkedIn where I found a website listed for the company and decided to see if the flag was buried somewhere on the website. The website redirected to whoismrrobot[.]com which seemed to host different virtual machines with content related to the hacking group known as fsociety. I did some exploring on the machines’ terminals to look for documents or Hack the Box related information but nothing that looked like it would lead to a flag.
+
 ![Redirected to this Evil Corp site from LinkedIn](images/website.png)
 
 I took another look at the challenge prompt and decided to go back to social media to see if there were some other leads I missed. There wasn’t anything else on the Evil Corp LLC LinkedIn page, so I went back to my initial search results page and looked at the results under LinkedIn. The next link led to someone’s Instagram account and seemed more promising than the rest of the results.
+
 ![More search results with Instagram finding](images/searchcontinued.png)
 
 The Google result didn’t initially seem like it would have an answer, but the account description said the user worked for Evil Corp LLC. There were no flags in the user’s description, just a link to LinkedIn and her job title.
+
 ![Instagram profile of Evil Corp employee](images/instagram.png)
 
 I started clicking through the photos and landed on one with lots of comments, including an HTB flag. I noticed that the comment with the flag had been posted much more recently than the original post and I thought that was an odd way to set up a challenge, so I took a closer look at the original post. In the photo, the flag is printed on an ID badge. Once I realized the photo had an ID badge I connected that back to the original challenge prompt. It said, “find something to help you break into the company” and an ID badge fits that criteria more perfectly than I had expected.
+
 ![Post containing flag in comment and photo](images/post.png)
 
 I entered the ID badge flag on Hack the Box and the challenge was marked as successfully completed.
+
 ![Successful submission of flag on Hack the Box](images/solved.png)
 
 ### Review and Advice
