@@ -2,11 +2,11 @@
 OSINT is an important and often overlooked part of pentesting. Doing proper reconnaissance can give you information you might need to impersonate or hack the target that requested pentesting services. Hack the Box has a number of OSINT challenges that can help you get started and today I’ll walk you through how I approached one of them.
 
 ### My Approach
-<em>Infiltration</em> is, as of this writing, a medium level challenge. The prompt asks us to do recon on social media to find something that could help us break into the target company: Evil Corp LLC.
+<em>Infiltration</em> is, as of this writing, a medium level challenge. The prompt recommends doing recon on social media to find something that could help break into the target company: Evil Corp LLC.
 
 ![Hack the Box challenge - Infiltration](images/infiltration.png)
 
-My first instinct when doing recon is to use Google dorking to narrow down my search. Since the prompt tells us to do some social media recon, I picked a social media site I thought might have information about Evil Corp LLC to start with – Facebook. Using the “insite” keyphrase, I searched for evidence of Evil Corp and got several results. At the top was a Facebook page followed by a LinkedIn page.
+My first instinct when doing recon is to use Google dorking to narrow down my search. Since the prompt told me to do some social media recon, I picked a social media site I thought might have information about Evil Corp LLC to start with – Facebook. Using the “insite” keyphrase, I searched for evidence of Evil Corp and got several results. At the top was a Facebook page followed by a LinkedIn page.
 
 ![Google Dorking search results](images/googledork.png)
 
@@ -18,7 +18,7 @@ I was surprised, but other people had rated the challenge easy. From my experien
 
 ![CyberChef decoding Base64 flag](images/cyberchef.png)
 
-A message of encouragement to show we were on the right track. Since this wasn’t the actual answer, I decided I probably needed to dig deeper on the LinkedIn site. I hadn’t forgotten about the Facebook result and didn’t want to leave it behind before diving deeper, so I took a look.
+A message of encouragement to show I was on the right track. Since this wasn’t the actual answer, I decided I probably needed to dig deeper on the LinkedIn site. I hadn’t forgotten about the Facebook result and didn’t want to leave it behind before diving deeper, so I took a look.
 
 ![Facebook page for Evil Corp](images/facebook.png)
 
@@ -47,4 +47,4 @@ I thought this was a very interesting challenge that might have been more obviou
 
 While it took me longer to find the flag, I thought this challenge led to a good experience in testing out different OSINT tactics. I also thought that the way the location of the flag – on an ID badge – connected much better back to the prompt than I had anticipated. There were enough threads to trace to make it interesting and not too simple, but the answer, once you found it, made a lot of sense.
 
-I would recommend that others completing OSINT challenges like this do a quick survey of the search engine results to determine where to drill down. I spent a lot of time on the E Corp website trying to dig up a flag there before remembering that the prompt focused on social media. I would also recommend looking for interesting elements to the challenges that could be useful when digging deeper on future challenges. Like the prompt’s phrasing “find something to help you break into the company” connecting to the ID badge where the flag was hidden or the fact that a comment containing the flag was posted way more recently than the post was created.
+I would recommend that others completing OSINT challenges like this do a quick survey of the search engine results to determine where to drill down. I spent a lot of time on the Evil Corp website trying to dig up a flag there before remembering that the prompt focused on social media. I would also recommend looking for interesting elements to the challenges that could be useful when digging deeper on future challenges. Like the prompt’s phrasing “find something to help you break into the company” connecting to the ID badge where the flag was hidden or the fact that a comment containing the flag was posted way more recently than the post was created.
