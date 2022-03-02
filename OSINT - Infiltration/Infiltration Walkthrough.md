@@ -2,7 +2,7 @@
 OSINT is an important and often overlooked part of pentesting. Doing proper reconnaissance can give you information you might need to impersonate or hack the target that requested pentesting services. Hack the Box has a number of OSINT challenges that can help you get started and today I’ll walk you through how I approached one of them.
 
 ### My Approach
-Infiltration is, as of this writing, a medium level challenge. The prompt asks us to do recon on social media to find something that could help us break into the target company: Evil Corp LLC.
+<em>Infiltration</em> is, as of this writing, a medium level challenge. The prompt asks us to do recon on social media to find something that could help us break into the target company: Evil Corp LLC.
 
 ![Hack the Box challenge - Infiltration](images/infiltration.png)
 
